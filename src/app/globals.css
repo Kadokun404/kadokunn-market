@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cream font-sans text-ink antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight;
+  }
+
+  ::selection {
+    @apply bg-brand-pink text-ink;
+  }
+
+  :focus-visible {
+    outline: 3px solid #111111;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .card {
+    @apply border-[3px] border-ink bg-white shadow-brutal;
+  }
+
+  .card-flat {
+    @apply border-[3px] border-ink bg-white;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 border-[3px] border-ink bg-brand-yellow px-4 py-2 text-sm font-bold text-ink shadow-brutal-sm transition-all hover:-translate-y-0.5 hover:shadow-brutal active:translate-x-0.5 active:translate-y-0.5 active:shadow-none disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0 disabled:hover:shadow-brutal-sm;
+  }
+
+  .btn-pink {
+    @apply bg-brand-pink;
+  }
+
+  .btn-blue {
+    @apply bg-brand-blue text-white;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 border-[3px] border-ink bg-white px-3 py-1.5 text-sm font-bold shadow-brutal-sm transition-all hover:-translate-y-0.5 hover:bg-cream hover:shadow-brutal active:translate-x-0.5 active:translate-y-0.5 active:shadow-none disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .input {
+    @apply w-full border-[3px] border-ink bg-white px-3 py-2 text-sm font-medium shadow-brutal-sm outline-none transition-colors placeholder:text-ink/50 focus:bg-brand-yellow/20;
+  }
+
+  .badge {
+    @apply inline-flex items-center border-2 border-ink px-2 py-0.5 text-xs font-bold uppercase tracking-wide;
+  }
+
+  .sticker {
+    @apply inline-flex -rotate-2 items-center border-[3px] border-ink bg-brand-pink px-3 py-1 text-sm font-bold shadow-brutal-sm;
+  }
+
+  .link-bold {
+    @apply font-bold underline decoration-[3px] underline-offset-4 hover:bg-brand-yellow;
+  }
+}
